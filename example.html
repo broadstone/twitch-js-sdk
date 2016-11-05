@@ -7,11 +7,11 @@
   <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
 
   <script>
-    window.CLIENT_ID = '4ea49phb73jeffd1d5mslv02e';
+    window.CLIENT_ID = '8bniexj6d5powh2fytzknrrm98vk2zo';
     $(function() {
       // Initialize. If we are already logged in, there is no
       // need for the connect button
-      Twitch.init({clientId: CLIENT_ID}, function(error, status) {
+      Twitch.init({clientId: CLIENT_ID, force_verify: true}, function(error, status) {
         if (status.authenticated) {
           // we're logged in :)
           $('.status input').val('Logged in! Allowed scope: ' + status.scope);
